@@ -5,13 +5,14 @@ namespace Banco
     internal class Program
     {
         static byte meses;
-        static string date = DateTime.Now.ToString("dddd dd 'de' MMMM yyyy HH:mm:ss tt 'GMT' K");
+        static readonly string date = DateTime.Now.ToString("dddd dd 'de' MMMM yyyy HH:mm:ss tt 'GMT' K");
         static int cantidad;
-        static float interes = 0.07f;
+        static readonly float interes = 0.07f;
         static float totalCapital = cantidad;
         private static string validateCantidad;
         private static string validateMeses;
         private static bool isNum;
+
         static void Main(string[] args)
         {
             Console.Title = "Banco de la Republica.";
