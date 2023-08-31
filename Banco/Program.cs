@@ -43,17 +43,17 @@ namespace Banco
         
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine($"\nIngresaste {cantidad.ToString("C")} a {meses} meses.\n");
+            Console.WriteLine($"\nIngresaste {cantidad:C} a {meses} meses.\n");
             for (var i = 1; i <= meses; i++)
             {
                 var ganancias = cantidad * interes;
                 cantidad = (int)(cantidad + ganancias);
                 totalCapital += ganancias;
-                Console.WriteLine($"El capital ganado en {i} mes es: {ganancias.ToString("C")}");
+                Console.WriteLine($"El capital ganado en {i} mes es: {ganancias:C}");
             }
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine($"\nLa ganancia total en {meses} meses es de {totalCapital.ToString("C")}");
+            Console.WriteLine($"\nLa ganancia total en {meses} meses es de {totalCapital:C}");
             Console.Write($"Consulta realizada el {date}");
             Console.ReadKey();
         }
